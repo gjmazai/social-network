@@ -1,8 +1,8 @@
-import React from 'react';
+import "./MainContent.css";
 
-const Technologies = () => {
+const MainContent = () => {
     return (
-        <div>
+        <div className="MainContent">
             <ul>
                 <li>css</li>
                 <li>html</li>
@@ -13,4 +13,4 @@ const Technologies = () => {
     );
 }
 
-export default Technologies;
+export default MainContent;
