@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import Footer from './Footer';
+import Header from './Header';
+import Technologies from './Technologies';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <img src="https://sun9-83.userapi.com/impf/c830509/v830509941/1c2061/OQrjEyPRGBg.jpg?size=400x399&quality=96&sign=805858948d996bd5ad859037d0b7e750&type=album"
+        className="App-logo" alt="logo" />
+      <Header />
+      <Technologies />
+      <Footer />
     </div>
   );
 }
