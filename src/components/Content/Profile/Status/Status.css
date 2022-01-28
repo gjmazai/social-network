@@ -1,0 +1,12 @@
+.Status{
+    border: solid black;
+    height: max-content;
+    border-radius: 30px;
+}
+
+
+#StatusName {
+    font-variant: small-caps;
+    font-weight: bold;
+
+}
