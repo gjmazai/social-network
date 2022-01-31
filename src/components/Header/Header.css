@@ -1,0 +1,48 @@
+.App-Header{
+    position: absolute;
+    width: 100%; 
+    background-color: rgb(53, 53, 53);
+    min-height: 150px;
+    display: grid;
+    font-size: calc(10px + 2vmin);
+    color: whitesmoke;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  .App-logo {
+    height: 80px;
+    width: min-content;
+    margin-top: 35px;
+    margin-left: 20px;
+  
+    grid-row-start: 0;
+    grid-row-end: 1;
+    grid-column-start: 0;
+    grid-column-end: 1;
+  }
+  
+  
+  .Header-hello{
+    grid-row-start: 0;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    -webkit-text-stroke: .07em rgb(3, 3, 3);
+    font-family:"Comic Sans MS", cursive;
+    margin-right: 200px;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  

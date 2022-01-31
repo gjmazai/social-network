@@ -4,15 +4,11 @@
   height: 100%;
   /* position: absolute; */
   grid-template-rows: 100px 50px 1fr 50px;
-  grid-template-columns: 300px 1fr 300px;
+  grid-template-columns: 220px 1fr 500px;
   grid-gap: 100px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+
 
 
 
@@ -22,44 +18,6 @@
   grid-row-start: 0;
   grid-row-end: 2;
 
-  position: absolute;
-  width: 100%; 
-  background-color: rgb(53, 53, 53);
-  min-height: 150px;
-  display: grid;
-  font-size: calc(10px + 2vmin);
-  color: whitesmoke;
-}
-
-.App-logo {
-  height: 80px;
-  width: min-content;
-  margin-top: 35px;
-  margin-left: 20px;
-
-  grid-row-start: 0;
-  grid-row-end: 1;
-  grid-column-start: 0;
-  grid-column-end: 1;
-}
-
-
-.Header-hello{
-  grid-row-start: 0;
-  grid-row-end: 1;
-  grid-column-start: 1;
-  grid-column-end: 2;
-  -webkit-text-stroke: .07em rgb(3, 3, 3);
-  font-family:"Comic Sans MS", cursive;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 
@@ -88,9 +46,18 @@ a{
 }
 
 
-.ProfileContent{
+.app-wrapper-content{
   grid-row-start: 2;
   grid-row-end: 3;
-  grid-column-start: 2;
+  grid-column-start: 1;
   grid-column-end: 3;
+
+  margin-left: 100px;
+
+  border: 4px solid #1f1f1f;
+  background-color: rgb(51, 51, 51);
+  background-clip: border-box;
+  color: rgb(255, 229, 197);
+  width: 100%;
+  height: max-content;
 }
