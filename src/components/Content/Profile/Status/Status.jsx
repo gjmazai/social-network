@@ -1,4 +1,5 @@
 import "./Status.css";
+import classes from '../ProfileContent.module.css'
 
 const StatusProfile = () => {
     return (

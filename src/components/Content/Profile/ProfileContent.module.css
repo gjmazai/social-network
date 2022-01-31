@@ -1,0 +1,49 @@
+.ProfileContent{
+
+   
+    display: grid;
+    grid-template-columns: 200px 1fr 400px;
+    grid-template-rows: 300px 1fr;
+    margin-left: 350px;
+    margin-top: 200px;
+    border: 4px solid #1f1f1f;
+    background-color: rgb(51, 51, 51);
+    background-clip: border-box;
+    color: rgb(255, 229, 197);
+    width: max-content;
+    height: max-content;
+    position: absolute;
+}
+  
+.word{
+    grid-column-start: 0;
+    grid-column-end: 1;
+    grid-row-start: 0;
+    grid-row-end: 1;
+}
+  
+  
+.ava{
+    grid-column-start: 0;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    width: 200px;
+}
+  
+.Status{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 0;
+    grid-row-end: 2;
+  
+    width: max-content;
+}
+
+.MyPosts{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}

@@ -8,7 +8,8 @@ const App = () => {
     <div className="App">
       <Header />
       <NavBar />
-      <ProfileContent />
+      {/* <ProfileContent /> */}
+      <Dialogs />
     </div>
   );
 }

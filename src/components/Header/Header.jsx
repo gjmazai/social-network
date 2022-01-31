@@ -3,7 +3,7 @@ const Header = () => {
     <header className="App-Header">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/I.T_logo.svg/1030px-I.T_logo.svg.png"
         className="App-logo" alt="logo" />
-      <h1 className="Header-hello">Приветсвую на КИТИДИС</h1>
+      <h1 className="Header-hello">Приветсвую в Конохе!</h1>
     </header>);
 }
 

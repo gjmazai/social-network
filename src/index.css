@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(244 174 76) url("https://i.pinimg.com/originals/5e/93/00/5e930095a2eb5ccf0189cfb827945240.png") no-repeat fixed 300px 150px;
+
 }
 
 code {

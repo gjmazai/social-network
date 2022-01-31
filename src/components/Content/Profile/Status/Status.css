@@ -1,6 +1,7 @@
 .Status{
     border: solid black;
     height: max-content;
+    width: max-content;
     border-radius: 30px;
 }
 
