@@ -32,7 +32,6 @@
   font-style: italic;
   font-size: 1.2em;
   font-weight: 600;
-  font-feature-settings: "vrt2";
   border-right: solid rgb(114, 2, 2) 3px;
 }
 
@@ -59,5 +58,6 @@ a{
   background-clip: border-box;
   color: rgb(255, 229, 197);
   width: 100%;
+  min-height: 720px;
   height: max-content;
 }

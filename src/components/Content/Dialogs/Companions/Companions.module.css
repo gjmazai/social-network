@@ -1,0 +1,28 @@
+.companion{
+    display: grid;
+    max-width: 370px;
+    font-style: italic;
+    grid-template-columns: 120px 1fr;
+}
+
+.img{
+    border-radius: 30px;
+    width: 100px;
+    grid-column: 1;
+    grid-row: 1/2;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+.name{
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 1.2em;
+}
+
+.last_message{
+    grid-column: 2;
+    grid-row: 2;
+    margin-top: -3em;
+    grid-gap: 10px;
+}

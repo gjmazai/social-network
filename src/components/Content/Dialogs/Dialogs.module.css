@@ -1,0 +1,12 @@
+.dialogs{
+    display: grid;
+    grid-template-columns: 370px 1fr;
+}
+
+.list_dialogs{
+    grid-column: 1;
+}
+
+.window{
+    grid-column: 2;
+}
