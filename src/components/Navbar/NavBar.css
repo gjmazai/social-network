@@ -5,3 +5,8 @@
   a{
     text-decoration: none;
   }
+
+  a.active{
+    color: rgb(39, 0, 0);
+    text-transform: uppercase;
+  }

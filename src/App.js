@@ -11,7 +11,7 @@ const App = () => {
       <div className="App">
         <Header />
         <NavBar />
-        <div class="app-wrapper-content">
+        <div className="app-wrapper-content">
           <Routes> {/* Именно ROUTES */}
             <Route path="/dialogs" element={<Dialogs />} /> {/*Помним, что надо обрамить 
         все <BrowserRouter></BrowserRouter> */}
