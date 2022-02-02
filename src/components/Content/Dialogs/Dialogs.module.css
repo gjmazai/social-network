@@ -1,12 +1,42 @@
 .dialogs{
     display: grid;
     grid-template-columns: 370px 1fr;
+    height: inherit;
 }
 
 .list_dialogs{
     grid-column: 1;
 }
 
-.window{
+.window_dialog{
     grid-column: 2;
+    height: 680px;
+    margin-top: 1em;
+    border-left: 2px solid rgb(0, 0, 0);
 }
+
+.header_window_dialog{
+    margin-left: 1em;
+}
+
+.message{
+    margin-left: 1em;
+    margin-top: 1em;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+}
+
+.avatar_in_dialogs{
+    grid-column: 1;
+    grid-row: 1/2;
+    width: 50px;
+    border-radius: 30px;
+}
+
+.sender{
+    grid-column: 2;
+    grid-row: 1;
+    text-align: left;
+}
+
+
