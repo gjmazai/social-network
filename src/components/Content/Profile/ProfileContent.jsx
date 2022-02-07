@@ -1,20 +1,44 @@
+import React from "react";
 import Posts from "./MyPosts/MyPosts";
 import classes from "./ProfileContent.module.css";
 import StatusProfile from 'C:/Programming/JS/React-projects/my-message/src/components/Content/Profile/Status/Status.jsx';
 
-const ProfileContent = () => {
+
+const ProfileContent = (props) => {
+
+    let PostItem = props.profilePage.postData.map(post => <Posts img={post.imgUrl} comment={post.comment} />);
+
+
+    let newPostElement = React.createRef();
+
+    let buttonAddMyPosts = () => { // функция для обработки нажатия клика на кнопку
+        let text = newPostElement.current.value;
+        props.addPost(text);
+        //newPostElement = ''; // занулили строку, чтобы после отправки снова была пустая строка
+        // тут я не имею право занулять, занулять можно только в state
+        props.updateNewPostText(''); // вот так зануляем через state. Передавая ему пустую строку после отправки
+    }
+
+    let onPostChange = () => { // функция для вписывания деталей в texarea
+        let text = newPostElement.current.value;
+        props.updateNewPostText(text);
+    }
+
     return (
         <div className={classes.ProfileContent}>
             <p className={classes.word}>Мой профиль</p>
-            <img src="https://avatars.mds.yandex.net/get-zen_doc/3469057/pub_5f2c54363131c2273a731565_5f2c54838c983213b9a4b764/scale_1200"
+            <img src="https://i.pinimg.com/originals/e2/14/32/e21432435f46ea9a9e146e20a556e694.jpg"
                 alt="myavatar" className={classes.ava} />
 
             <StatusProfile />
 
             <div className={classes.MyPosts}>
-                <p>Мои посты:</p>
-                <Posts img="https://img-9gag-fun.9cache.com/photo/aw5MXdB_460s.jpg" comment='like' />
-                <Posts img="https://i.pinimg.com/originals/20/8a/9b/208a9b5b2880f5ca8a8e39bf1d02f06c.jpg" comment="it's my second post" />
+                <h3>Мои посты:</h3>
+                <div className={classes.MyPostAdd}>
+                    <textarea className={classes.textAdd} ref={newPostElement} onChange={onPostChange} value={props.profilePage.newPostText} />
+                    <button className={classes.btnAdd} onClick={buttonAddMyPosts}>Add post</button>
+                </div>
+                {PostItem}
             </div>
         </div>
     );

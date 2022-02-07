@@ -41,3 +41,20 @@
     grid-row-start: 2;
     grid-row-end: 3;
 }
+.MyPostAdd{
+    width: 400px;
+}
+
+.textAdd{
+    width: 400px;
+    height: 5em;
+}
+
+.btnAdd{
+    background-color: rgb(39, 39, 39);
+    color: rgb(250, 246, 225);
+    border: 2px solid rgb(1,1,1);
+    font-size: 1em;
+    font-style: italic;
+    margin-left: 320px;
+}

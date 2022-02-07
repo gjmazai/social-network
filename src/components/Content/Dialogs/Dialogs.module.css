@@ -39,4 +39,56 @@
     text-align: left;
 }
 
+.dialogText{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 3em;
+    margin-left: 3em;
+    display: grid;
+    grid-template-columns: 1fr 80px;
+}
 
+.newMessage{
+    width: 485px;
+    border-radius: 10px;
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.sendMessage {
+    text-decoration: none;
+    /* display: inline-block; */
+    width: 70px;
+    height: 70px;
+    margin: 10px 20px;
+    /* padding: 10px 30px; */
+    position: relative;
+    border: 2px solid rgb(244,174,76);
+    color: rgb(244,174,76);
+    background-color: rgb(53, 53, 53);
+    font-family: 'Montserrat', sans-serif;
+    transition: .4s;
+    grid-row: 1;
+    grid-column: 2;
+    border-radius: 10px;
+  }
+  .sendMessage:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    border: 2px solid rgba(0, 0, 0, 0);
+    transform: rotate(45deg); 
+    transition: .4s;
+    border-radius: 10px;
+  }
+  .sendMessage:hover:after {
+    border-color: rgb(244,174,76);
+    /* width: calc(100% - 10px);
+    height: calc(100% + 10px); */
+  }

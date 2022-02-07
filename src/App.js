@@ -5,18 +5,23 @@ import NavBar from './components/Navbar/NavBar.jsx';
 import Dialogs from './components/Content/Dialogs/Dialogs';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-const App = () => {
+const App = (props) => {
   return (
-    <BrowserRouter>
+    <BrowserRouter>{/*Помним, что надо обрамить все <BrowserRouter></BrowserRouter> */}
       <div className="App">
         <Header />
         <NavBar />
         <div className="app-wrapper-content">
           <Routes> {/* Именно ROUTES */}
-            <Route path="/dialogs" element={<Dialogs />} /> {/*Помним, что надо обрамить 
-        все <BrowserRouter></BrowserRouter> */}
+            <Route path="/dialogs" element={<Dialogs
+              dialogPage={props.appState.dialogPage}
+              addMyMessage={props.addMyMessage}
+              updateNewMessageText={props.updateNewMessageText} />} />
 
-            <Route path="/profile" element={<ProfileContent />} />
+            <Route path="/profile" element={<ProfileContent
+              profilePage={props.appState.profilePage}
+              addPost={props.addPost}
+              updateNewPostText={props.updateNewPostText} />} />
           </Routes>
         </div>
       </div >
