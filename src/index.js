@@ -1,4 +1,4 @@
-import state from "./myRedux/state";
+import state, { subscribe } from "./myRedux/state";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -8,7 +8,7 @@ import { addMyMessage, addPost, updateNewMessageText, updateNewPostText } from "
 
 // addPost('Test post', "https://i.pinimg.com/originals/cf/6b/87/cf6b8793db9a1a67d09ac3a75af817fa.jpg");
 
-let renderEntireTree = () => {
+let renderEntireTree = (state) => {
 
     ReactDOM.render(
         <React.StrictMode>
@@ -25,5 +25,6 @@ let renderEntireTree = () => {
 
 }
 
+renderEntireTree(state); // вызов первый раз, чтобы произошла первая отрисовка
 
-renderEntireTree();
+subscribe(renderEntireTree);

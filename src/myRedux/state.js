@@ -44,8 +44,14 @@ let state = {
 
 }
 
-//     Функции для страницы Профиля
+/* Патерн - обсервер(наблюдатель) - кто-то наблюдает за обьектом и когда с обьектом что-то происходит, наблюдатель об этом уведомляется */
+export const subscribe = (observer) => {
+    renderEntireTree = observer; // в качестве callback прилетает  renderEntireTree из index.js и функция из этого файла теперь выполняет 
+    // действия renderEntireTree 
+}
 
+
+//     Функции для страницы Профиля
 export const addPost = (postMessage, postImg) => {
 
     let newPost = {
@@ -57,7 +63,6 @@ export const addPost = (postMessage, postImg) => {
     state.profilePage.postData.push(newPost);
     renderEntireTree(state);
 }
-
 export const updateNewPostText = (newText) => {
 
     state.profilePage.newPostText = newText;
@@ -65,8 +70,7 @@ export const updateNewPostText = (newText) => {
 }
 
 //     Функции для страницы диалогов
-
-export let addMyMessage = (textMessage) => { // функция для добавления нового сообщения
+export const addMyMessage = (textMessage) => { // функция для добавления нового сообщения
     // let newId = state.dialogPage.messagesData[-1].id + 1;
     let newMessage = {
         id: arrayLast(state.dialogPage.messagesData).id,
@@ -77,8 +81,7 @@ export let addMyMessage = (textMessage) => { // функция для добав
     state.dialogPage.messagesData.push(newMessage);
     renderEntireTree(state);
 }
-
-export let updateNewMessageText = (newMessageText) => {
+export const updateNewMessageText = (newMessageText) => {
     debugger;
     state.dialogPage.newMessageText = newMessageText;
     renderEntireTree(state);
@@ -88,6 +91,7 @@ export let updateNewMessageText = (newMessageText) => {
 export default state;
 
 
+// функция для вызова последнего элемента массива
 let arrayLast = (array) => {
     return array[array.length - 1];
 }
