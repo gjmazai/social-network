@@ -21,7 +21,7 @@ const WindowDialog = (props) => {
                 {messagesElements} {/* теперь тут спокойно меняем на сам массив и ариться не надо */}
             </div>
 
-            <DialogText addMyMessage={props.addMyMessage} updateNewMessageText={props.updateNewMessageText} newMessageText={props.newMessageText} />
+            <DialogText dispath={props.dispath} newMessageText={props.newMessageText} />
 
         </div>
     );

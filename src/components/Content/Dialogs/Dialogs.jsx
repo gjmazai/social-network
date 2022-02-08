@@ -22,8 +22,7 @@ const Dialogs = (props) => {
             <WindowDialog dialogsData={props.dialogPage.dialogsData}
                 messagesData={props.dialogPage.messagesData}
                 newMessageText={props.dialogPage.newMessageText}
-                addMyMessage={props.addMyMessage}
-                updateNewMessageText={props.updateNewMessageText} />
+                dispath={props.dispath} />
         </div >
     );
 }

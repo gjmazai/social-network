@@ -13,15 +13,15 @@ const ProfileContent = (props) => {
 
     let buttonAddMyPosts = () => { // функция для обработки нажатия клика на кнопку
         let text = newPostElement.current.value;
-        props.addPost(text);
+        props.dispath({ type: "ADD-POST", postMessage: text });
         //newPostElement = ''; // занулили строку, чтобы после отправки снова была пустая строка
         // тут я не имею право занулять, занулять можно только в state
-        props.updateNewPostText(''); // вот так зануляем через state. Передавая ему пустую строку после отправки
+        props.dispath({ type: "UPDATE-NEW-POST-TEXT", newText: "" }); // вот так зануляем через state. Передавая ему пустую строку после отправки
     }
 
     let onPostChange = () => { // функция для вписывания деталей в texarea
         let text = newPostElement.current.value;
-        props.updateNewPostText(text);
+        props.dispath({ type: "UPDATE-NEW-POST-TEXT", newText: text });
     }
 
     return (

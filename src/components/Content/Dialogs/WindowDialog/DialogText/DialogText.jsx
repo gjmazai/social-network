@@ -9,14 +9,14 @@ const DialogText = (props) => {
 
     let SendMessage = () => { // функция отправки через обработчик событий
         let text = newTextMessage.current.value;
-        props.addMyMessage(text);
-        props.updateNewMessageText('');
+        props.dispath({ type: "ADD-MY-MESSAGE", textMessage: text });
+        props.dispath({ type: "UPDATE-NEW-MESSAGE-TEXT", newMessageText: '' });
     }
 
     let updateMessageText = () => {
         debugger;
         let text = newTextMessage.current.value;
-        props.updateNewMessageText(text);
+        props.dispath({ type: "UPDATE-NEW-MESSAGE-TEXT", newMessageText: text });
     }
 
     return (
