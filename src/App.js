@@ -6,6 +6,7 @@ import Dialogs from './components/Content/Dialogs/Dialogs';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 const App = (props) => {
+  debugger;
   return (
     <BrowserRouter>{/*Помним, что надо обрамить все <BrowserRouter></BrowserRouter> */}
       <div className="App">
@@ -14,12 +15,12 @@ const App = (props) => {
         <div className="app-wrapper-content">
           <Routes> {/* Именно ROUTES */}
             <Route path="/dialogs" element={<Dialogs
-              dialogPage={props.state.dialogPage}
-              dispath={props.dispath} />} />
+              dialogPage={props.state}
+              dispatch={props.dispatch} />} />
 
             <Route path="/profile" element={<ProfileContent
-              profilePage={props.state.profilePage}
-              dispath={props.dispath} />} />
+              profilePage={props.state.profileReducer}
+              dispatch={props.dispatch} />} />
           </Routes>
         </div>
       </div >

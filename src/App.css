@@ -55,6 +55,7 @@ a{
 
   border: 4px solid #1f1f1f;
   background-color: rgb(51, 51, 51);
+  /* background: rgb(51, 51, 51) url("https://www.teahub.io/photos/full/340-3406101_-.jpg") no-repeat fixed 780px -100px; */
   background-clip: border-box;
   color: rgb(255, 229, 197);
   width: 100%;

@@ -1,3 +1,6 @@
+import dialogsReducer from "./dialogs-reducer";
+import profileReducer from "./profile-reducer";
+import sideBarReducer from "./sidebar-reducer";
 
 
 let store = {
@@ -41,71 +44,27 @@ let store = {
             ],
             newMessageText: '',
         },
+        sidebar: {},
     },
     _callSubscriber() {
         console.log("State changed");
-    },
-
-
-    getState() {
-        return this._state;
-    },
-    arrayLast(array) {
-        return array[array.length - 1];
     },
     subscribe(observer) {
         this._callSubscriber = observer; // в качестве callback прилетает  this._renderEntireTree из index.js и функция из этого файла теперь выполняет 
         // действия this._renderEntireTree 
     },
-
-
-    // addPost(postMessage, postImg) {
-
-    // },
-    // updateNewPostText(newText) {
-
-
-    // },
-    // addMyMessage(textMessage) { // функция для добавления нового сообщения
-    //     // let newId = this._state.dialogPage.messagesData[-1].id + 1;
-
-    // },
-    // updateNewMessageText(newMessageText) {
-
-    // },
+    getState() {
+        return this._state;
+    },
 
     dispath(action) { // {type: "ADD-MESSAGE"}
-        if (action.type === "ADD-POST") {
-            let newPost = {
-                id: "3",
-                comment: action.postMessage,
-                imgUrl: action.postImg,
-            };
 
-            this._state.profilePage.postData.push(newPost);
-            this._callSubscriber(this._state);
-        }
-        else if (action.type === "UPDATE-NEW-POST-TEXT") {
-            this._state.profilePage.newPostText = action.newText;
-            this._callSubscriber(this._state);
-        }
-        else if (action.type === "ADD-MY-MESSAGE") {
-            let newMessage = {
-                id: this.arrayLast(this._state.dialogPage.messagesData).id + 1,
-                message: action.textMessage,
-                idSender: "Stas",
-                idRecipient: "Efim Cimerman"
-            }
-            this._state.dialogPage.messagesData.push(newMessage);
-            this._callSubscriber(this._state);
-        }
-        else if (action.type === "UPDATE-NEW-MESSAGE-TEXT") {
-            this._state.dialogPage.newMessageText = action.newMessageText;
-            this._callSubscriber(this._state);
-        }
+        this._state.dialogPage = dialogsReducer(this._state.dialogPage, action);
+        this._state.profilePage = profileReducer(this._state.profilePage, action);
+        this._state.sidebar = sideBarReducer(this._state.sidebar, action);
+        this._callSubscriber(this._state);
+
     }
-
-
 }
 
 export default store;

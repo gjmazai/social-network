@@ -8,20 +8,19 @@ const ProfileContent = (props) => {
 
     let PostItem = props.profilePage.postData.map(post => <Posts img={post.imgUrl} comment={post.comment} />);
 
-
     let newPostElement = React.createRef();
 
     let buttonAddMyPosts = () => { // функция для обработки нажатия клика на кнопку
         let text = newPostElement.current.value;
-        props.dispath({ type: "ADD-POST", postMessage: text });
+        props.dispatch({ type: "ADD-POST", postMessage: text });
         //newPostElement = ''; // занулили строку, чтобы после отправки снова была пустая строка
         // тут я не имею право занулять, занулять можно только в state
-        props.dispath({ type: "UPDATE-NEW-POST-TEXT", newText: "" }); // вот так зануляем через state. Передавая ему пустую строку после отправки
+        props.dispatch({ type: "UPDATE-NEW-POST-TEXT", newText: "" }); // вот так зануляем через state. Передавая ему пустую строку после отправки
     }
 
     let onPostChange = () => { // функция для вписывания деталей в texarea
         let text = newPostElement.current.value;
-        props.dispath({ type: "UPDATE-NEW-POST-TEXT", newText: text });
+        props.dispatch({ type: "UPDATE-NEW-POST-TEXT", newText: text });
     }
 
     return (

@@ -12,6 +12,7 @@ const NavBar = () => {
                     <li><NavLink to='/dialogs'>Dialogs</NavLink></li>
                     <li><NavLink to='/friends'>Friends</NavLink></li>
                     <li><NavLink to='/music'>Music</NavLink></li>
+                    <li><NavLink to='/themes'>Themes</NavLink></li>
                 </ul>
             </div>
             <div className="Add-NavBar">

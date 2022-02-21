@@ -1,4 +1,4 @@
-import store from "./myRedux/state";
+import store from "./myRedux/redux-store";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -7,14 +7,17 @@ import reportWebVitals from './reportWebVitals';
 
 
 let renderEntireTree = (state) => {
+    debugger;
 
     ReactDOM.render(
         <React.StrictMode>
+
             <App state={state}
-                dispath={store.dispath.bind(store)} />
+                dispatch={store.dispatch.bind(store)} />
         </React.StrictMode>,
         document.getElementById('root')
     );
+    debugger;
 
     reportWebVitals();
 
@@ -22,4 +25,7 @@ let renderEntireTree = (state) => {
 
 renderEntireTree(store.getState()); // вызов первый раз, чтобы произошла первая отрисовка
 
-store.subscribe(renderEntireTree);
+store.subscribe(() => {
+    let state = store.getState();
+    renderEntireTree(state);
+});
