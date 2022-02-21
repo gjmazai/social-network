@@ -1,9 +1,9 @@
 import './App.css';
 import Header from './components/Header/Header.jsx';
-import ProfileContent from './components/Content/Profile/ProfileContent.jsx';
 import NavBar from './components/Navbar/NavBar.jsx';
 import Dialogs from './components/Content/Dialogs/Dialogs';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import ProfileContentContainer from './components/Content/Profile/ProfileContentContainer';
 
 const App = (props) => {
   debugger;
@@ -18,7 +18,7 @@ const App = (props) => {
               dialogPage={props.state}
               dispatch={props.dispatch} />} />
 
-            <Route path="/profile" element={<ProfileContent
+            <Route path="/profile" element={<ProfileContentContainer
               profilePage={props.state.profileReducer}
               dispatch={props.dispatch} />} />
           </Routes>

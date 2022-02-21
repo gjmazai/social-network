@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./../Dialogs.module.css";
-import DialogText from "./DialogText/DialogText";
+import DialogTextContainer from "./DialogText/DialogTextContainer";
 import Messages from './MessagesDialog/Messages';
 // import dialogsData from "./../Dialogs.jsx";
 
@@ -21,7 +21,7 @@ const WindowDialog = (props) => {
                 {messagesElements} {/* теперь тут спокойно меняем на сам массив и ариться не надо */}
             </div>
 
-            <DialogText dispatch={props.dispatch} newMessageText={props.newMessageText} />
+            <DialogTextContainer dispatch={props.dispatch} newMessageText={props.newMessageText} />
 
         </div>
     );

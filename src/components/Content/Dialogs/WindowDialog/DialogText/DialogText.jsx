@@ -1,25 +1,19 @@
 import React from "react";
-import { addMyMessageActionCreator, updateNewMessageTextActionCreator } from "../../../../../myRedux/dialogs-reducer";
 import classes from "./../../Dialogs.module.css";
 
 
 const DialogText = (props) => {
 
-    let newTextMessage = React.createRef(); // ссылку на текст месседж
+    let newTextMessage = React.createRef(); // ссылкa на текст месседж
 
-    let SendMessage = () => { // функция отправки через обработчик событий
+    let SendMessage = () => {
         let text = newTextMessage.current.value;
-        let action = addMyMessageActionCreator(text);
-        props.dispatch(action);
-        action = updateNewMessageTextActionCreator('');
-        props.dispatch(action);
+        props.onSendMessage(text);
     }
 
     let updateMessageText = () => {
-        debugger;
         let text = newTextMessage.current.value;
-        let action = updateNewMessageTextActionCreator(text);
-        props.dispatch(action);
+        props.onUpdateMessageText(text);
     }
 
     return (
