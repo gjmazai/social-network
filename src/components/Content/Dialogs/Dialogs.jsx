@@ -8,7 +8,7 @@ import WindowDialog from "./WindowDialog/WindowDialog.jsx";
 
 const Dialogs = (props) => {
 
-    let dialogsElemenents = props.dialogPage.dialogsReducer.dialogsData.map(d => <Companions id={d.id} name={d.name}
+    let dialogsElemenents = props.dialogsData.map(d => <Companions key={d.id} id={d.id} name={d.name}
         last_message={d.last_message} ava={d.ava} />)
 
     return (
@@ -19,9 +19,9 @@ const Dialogs = (props) => {
                 </ul>
             </div>
 
-            <WindowDialog dialogsData={props.dialogPage.dialogsReducer.dialogsData}
-                messagesData={props.dialogPage.dialogsReducer.messagesData}
-                newMessageText={props.dialogPage.dialogsReducer.newMessageText}
+            <WindowDialog dialogsData={props.dialogsData}
+                messagesData={props.messagesData}
+                newMessageText={props.newMessageText}
                 dispatch={props.dispatch} />
         </div >
     );

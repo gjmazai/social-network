@@ -1,21 +1,27 @@
-import React from "react";
+import { connect } from "react-redux";
 import { addPostActionCreator, updateNewPostTextActionCreator } from "../../../myRedux/profile-reducer";
 import ProfileContent from "./ProfileContent";
 
 
-
-const ProfileContentContainer = (props) => { // Контейнерная компонента
-
-    let buttonAddMyPosts = (text) => {
-        props.dispatch(addPostActionCreator(text));
-        props.dispatch(updateNewPostTextActionCreator("")); // зануляем
+let mapStateToProps = (state) => {
+    return {
+        profilePage: state.profileReducer,
     }
-
-    let onPostChange = (text) => { // функция для вписывания деталей в texarea
-        props.dispatch(updateNewPostTextActionCreator(text));
-    }
-
-    return (<ProfileContent addPost={buttonAddMyPosts} updateNewPostText={onPostChange} profilePage={props.profilePage} />);
 }
+
+let mapDispatchToProps = (dispatch) => {
+    return {
+        addPost: (text) => {
+            dispatch(addPostActionCreator(text));
+            dispatch(updateNewPostTextActionCreator("")); // зануляем
+        },
+        updateNewPostText: (text) => {
+            dispatch(updateNewPostTextActionCreator(text));
+        },
+    }
+}
+
+
+const ProfileContentContainer = connect(mapStateToProps, mapDispatchToProps)(ProfileContent);
 
 export default ProfileContentContainer;

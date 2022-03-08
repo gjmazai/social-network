@@ -11,6 +11,7 @@ const NavBar = () => {
                     <li><NavLink to='/news'>News</NavLink></li>
                     <li><NavLink to='/dialogs'>Dialogs</NavLink></li>
                     <li><NavLink to='/friends'>Friends</NavLink></li>
+                    <li><NavLink to='/users'>Users</NavLink></li>
                     <li><NavLink to='/music'>Music</NavLink></li>
                     <li><NavLink to='/themes'>Themes</NavLink></li>
                 </ul>

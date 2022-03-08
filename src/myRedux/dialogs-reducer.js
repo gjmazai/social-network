@@ -42,12 +42,21 @@ const dialogsReducer = (state = initialState, action) => {
                 idSender: "Stas",
                 idRecipient: "Efim Cimerman"
             }
-            state.messagesData.push(newMessage);
-            return state;
+            debugger;
+            return {
+                ...state,
+                messagesData: [...state.messagesData, newMessage],
+            };
+
 
         case UPDATE_NEW_MESSAGE_TEXT:
-            state.newMessageText = action.newMessageText;
-            return state;
+            debugger;
+            return {
+                ...state,
+                newMessageText: action.newMessageText,
+            }
+
+        // return { ...state, newMessage: action.newMessageText };
 
         default:
             return state;

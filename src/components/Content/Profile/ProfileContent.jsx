@@ -5,7 +5,7 @@ import StatusProfile from 'C:/Programming/JS/React-projects/my-message/src/compo
 
 
 const ProfileContent = (props) => {
-
+    debugger;
     let PostItem = props.profilePage.postData.map(post => <Posts img={post.imgUrl} comment={post.comment} />);
     let newPostElement = React.createRef();
 
