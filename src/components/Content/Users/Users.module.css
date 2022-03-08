@@ -1,0 +1,46 @@
+.Users{
+    margin-top: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+}
+
+.User{
+    display: grid;
+    grid-template-columns: 90px, 1fr, 50px;
+    grid-gap: 10px;
+    height: 150px;
+    width: 900px;
+    border-bottom: 2px solid rgb(179, 136, 56);
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.avatar{
+    grid-column: 1/2;
+}
+
+.avatarPhoto{
+    /* border: 3px solid rgb(161, 122, 50); */
+    border-radius: 30px;
+    width: 120px;
+    height: 120px;
+}
+
+.infoUser{
+    grid-column: 2/3;
+    text-align:center;
+    border: 3px solid rgb(161, 122, 50);
+    border-radius: 35px;
+    height: max-content;
+    margin-left: -150px;
+}
+
+.btn{
+    grid-column: 3/4;
+}
+
+.btnFollow{
+    border: 3px solid rgb(3, 3, 3);
+    height: 90px;
+    width: 120px;
+}
