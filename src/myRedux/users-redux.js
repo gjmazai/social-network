@@ -5,39 +5,39 @@ const UNFOLLLOWED = "UNFOLLOWED";
 
 let initialState = {
     Users: [
-        {
-            id: 1,
-            name: 'Olya',
-            avatar: 'https://i.pinimg.com/236x/d5/2c/bd/d52cbdbba8c008534b0455363050aaf8.jpg',
-            status: 'All is OK',
-            location: {
-                country: "Kazakhstan",
-                city: "Temirtay",
-            },
-            followed: true
-        },
-        {
-            id: 2,
-            name: 'Efim',
-            avatar: 'https://pbs.twimg.com/profile_images/1328368539565223943/7kDsM9Cl_400x400.jpg',
-            location: {
-                country: "Russia",
-                city: "Barnaul",
-            },
-            status: "I'm ghoul",
-            followed: true
-        },
-        {
-            id: 3,
-            name: 'Sasha Krylov',
-            avatar: 'https://avatarfiles.alphacoders.com/184/184064.jpg',
-            location: {
-                country: "Russia",
-                city: "Buisk",
-            },
-            status: 'I love Megumin',
-            followed: false
-        },
+        // {
+        //     id: 1,
+        //     name: 'Olya',
+        //     photos: 'https://i.pinimg.com/236x/d5/2c/bd/d52cbdbba8c008534b0455363050aaf8.jpg',
+        //     status: 'All is OK',
+        //     location: {
+        //         country: "Kazakhstan",
+        //         city: "Temirtay",
+        //     },
+        //     followed: true
+        // },
+        // {
+        //     id: 2,
+        //     name: 'Efim',
+        //     photos: 'https://pbs.twimg.com/profile_images/1328368539565223943/7kDsM9Cl_400x400.jpg',
+        //     location: {
+        //         country: "Russia",
+        //         city: "Barnaul",
+        //     },
+        //     status: "I'm ghoul",
+        //     followed: true
+        // },
+        // {
+        //     id: 3,
+        //     name: 'Sasha Krylov',
+        //     photos: 'https://avatarfiles.alphacoders.com/184/184064.jpg',
+        //     location: {
+        //         country: "Russia",
+        //         city: "Buisk",
+        //     },
+        //     status: 'I love Megumin',
+        //     followed: false
+        // },
 
     ]
 }
